@@ -48,10 +48,15 @@ class motorcycle extends vehicle{
         super(Brand, model, year, rentalPrice);
         this.engineCapacity= engineCapacity;
     }
+
+    public int getEngineCapacity() {
+        return engineCapacity;
+    }
 }
 public class VehicleRentalSystem {
     public static void main(String[] args){
         car car=new car("Kia","Seltos",2019,40.0,5);
+        motorcycle motorcycle=new motorcycle("java","cs0212",2018,50,10);
         car.displayVehicleInfo();
 
         System.out.println(" Seats: " + car.getNoOfSets());
@@ -59,6 +64,6 @@ public class VehicleRentalSystem {
         System.out.println();
 
         motorcycle.displayVehicleInfo();
-        System.out.println(" Capacity: " + motorcycle.getengineCapcity);
+        System.out.println(" Capacity: " + motorcycle.getEngineCapacity());
     }
 }
